@@ -1,4 +1,11 @@
 <?php
+/**
+ * Copyright © Q-Solutions Studio: eCommerce Nanobots. All rights reserved.
+ *
+ * @category    Nanobots
+ * @package     Nanobots_CloudFlareCache
+ * @author      Jakub Winkler <jwinkler@qsolutionsstudio.com
+ */
 
 namespace Nanobots\CloudFlareCache\Console;
 
@@ -15,7 +22,7 @@ class ClearCache extends Command
     public const NAME = 'nanobots:cloudflare:cache-clear';
 
     /** @var string */
-    public const DESCRIPTION = 'Set start date (YYYY_MM_DD)';
+    public const DESCRIPTION = 'Clear CloudFlare cache';
 
     /** @var string[]  */
     public const ACCEPTED_REQUESTS = ['purge_everything', 'files', 'tags', 'hosts', 'prefixes'];

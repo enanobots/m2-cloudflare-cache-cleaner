@@ -1,4 +1,13 @@
 <?xml version="1.0"?>
+<!--
+/**
+ * Created by Q-Solutions Studio
+ *
+ * @category    Nanobots
+ * @package     Nanobots_CloudFlareCache
+ * @author      Jakub Winkler <jwinkler@qsolutionsstudio.com>
+ */
+ -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
     <acl>
         <resources>

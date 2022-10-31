@@ -1,4 +1,11 @@
 <?php
+/**
+ * Copyright © Q-Solutions Studio: eCommerce Nanobots. All rights reserved.
+ *
+ * @category    Nanobots
+ * @package     Nanobots_CloudFlareCache
+ * @author      Jakub Winkler <jwinkler@qsolutionsstudio.com
+ */
 
 namespace Nanobots\CloudFlareCache\Model\CloudFlare;
 
@@ -20,6 +27,8 @@ class Cache implements CacheInterface
 
     /** @var string  */
     const AUTHORIZATION_BEARER = 'Bearer %s';
+
+    /** @var string  */
     const HEADERS = 'headers';
 
     /** @var Client  */

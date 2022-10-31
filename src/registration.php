@@ -1,4 +1,11 @@
 <?php
+/**
+ * Copyright © Q-Solutions Studio: eCommerce Nanobots. All rights reserved.
+ *
+ * @category    Nanobots
+ * @package     Nanobots_CloudFlareCache
+ * @author      Jakub Winkler <jwinkler@qsolutionsstudio.com
+ */
 
 use Magento\Framework\Component\ComponentRegistrar;
 
