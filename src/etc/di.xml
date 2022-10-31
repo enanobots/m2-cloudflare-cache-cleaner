@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Nanobots\CloudFlareCache\Api\Data\ConfigInterface"
+                type="Nanobots\CloudFlareCache\Model\Config"/>
+    <preference for="Nanobots\CloudFlareCache\Api\CacheInterface"
+                type="Nanobots\CloudFlareCache\Model\CloudFlare\Cache"/>
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="nanobots_cloudflare_cache" xsi:type="object">Nanobots\CloudFlareCache\Console\ClearCache</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

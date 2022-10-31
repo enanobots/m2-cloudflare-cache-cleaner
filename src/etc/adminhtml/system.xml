@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+/**
+ * Created by Q-Solutions Studio
+ *
+ * @category    Nanobots
+ * @package     Nanobots_CloudFlareCache
+ * @author      Sebastian Strojwas <sebastian@qsolutionsstudio.com>
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="nanobots" translate="label" sortOrder="10">
+            <label>Nanobots</label>
+        </tab>
+        <section id="nanobots" sortOrder="500" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+            <label>Cloud Flare Cache</label>
+            <tab>nanobots</tab>
+            <resource>Nanobots_CloudFlareCache::config</resource>
+            <group id="cloudflarecache" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+                <label>API Settings</label>
+                <field id="auth_type" type="select" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+                    <label>CloudFlare Authorization Type</label>
+                    <source_model>Nanobots\CloudFlareCache\Model\Config\Source\AuthType</source_model>
+                </field>
+                <field id="xauth_email" type="text" translate="label" sortOrder="20" showInStore="1" showInWebsite="1" showInDefault="1">
+                    <label>XAuth Email Address</label>
+                    <depends>
+                        <field id="auth_type">0</field>
+                    </depends>
+                </field>
+                <field id="xauth_key" type="text" translate="label" sortOrder="30" showInStore="1" showInWebsite="1" showInDefault="1">
+                    <label>XAuth Key</label>
+                    <depends>
+                        <field id="auth_type">0</field>
+                    </depends>
+                </field>
+                <field id="auth_bearer" type="text" translate="label" sortOrder="40" showInStore="1" showInWebsite="1" showInDefault="1">
+                    <label>Authorization Bearer</label>
+                    <depends>
+                        <field id="auth_type">1</field>
+                    </depends>
+                </field>
+                <field id="v4_zone" type="text" translate="label" sortOrder="50" showInStore="1" showInWebsite="1" showInDefault="1">
+                    <label>V4 Zone ID</label>
+                    <comment><![CDATA[You can find how to get it <a href="https://developers.cloudflare.com/fundamentals/get-started/basic-tasks/find-account-and-zone-ids/">here</a>]]></comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
