@@ -22,7 +22,7 @@
   "prefer-stable": true,
   "require": {
     "php": ">=7.4",
-    "guzzlehttp/guzzle": "^6.5.8 || ^7.5.0"
+    "guzzlehttp/guzzle": "^6.0.0 || ^7.0.0"
   },
   "autoload": {
     "files": [
