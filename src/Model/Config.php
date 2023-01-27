@@ -33,7 +33,7 @@ class Config implements ConfigInterface
     public function getAuthType(): int
     {
         return (int)$this->scopeConfig->getValue(
-            'nanobots/cloudflarecache/auth_type',
+            self::XPATH_NANOBOTS_CLOUDFLARECACHE_AUTH_TYPE,
             ScopeInterface::SCOPE_STORE
         );
     }
@@ -44,7 +44,7 @@ class Config implements ConfigInterface
     public function getXAuthEmail(): ?string
     {
         return $this->scopeConfig->getValue(
-            'nanobots/cloudflarecache/xauth_email',
+            self::XPATH_NANOBOTS_CLOUDFLARECACHE_XAUTH_EMAIL,
             ScopeInterface::SCOPE_STORE
         );
     }
@@ -55,7 +55,7 @@ class Config implements ConfigInterface
     public function getXAuthKey(): ?string
     {
         return $this->scopeConfig->getValue(
-            'nanobots/cloudflarecache/xauth_key',
+            self::XPATH_NANOBOTS_CLOUDFLARECACHE_XAUTH_KEY,
             ScopeInterface::SCOPE_STORE
         );
     }
@@ -66,7 +66,7 @@ class Config implements ConfigInterface
     public function getAuthBearer(): ?string
     {
         return $this->scopeConfig->getValue(
-            'nanobots/cloudflarecache/auth_bearer',
+            self::XPATH_NANOBOTS_CLOUDFLARECACHE_AUTH_BEARER,
             ScopeInterface::SCOPE_STORE
         );
     }
@@ -77,7 +77,7 @@ class Config implements ConfigInterface
     public function getV4Zone(): ?string
     {
         return $this->scopeConfig->getValue(
-            'nanobots/cloudflarecache/v4_zone',
+            self::XPATH_NANOBOTS_CLOUDFLARECACHE_V_4_ZONE,
             ScopeInterface::SCOPE_STORE
         );
     }

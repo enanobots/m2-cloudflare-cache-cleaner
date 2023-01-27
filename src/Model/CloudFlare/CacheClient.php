@@ -10,11 +10,11 @@
 namespace Nanobots\CloudFlareCache\Model\CloudFlare;
 
 use GuzzleHttp\Client;
-use Nanobots\CloudFlareCache\Api\CacheInterface;
+use Nanobots\CloudFlareCache\Api\CloudFlare\CacheClientInterface;
 use Nanobots\CloudFlareCache\Api\Data\ConfigInterface;
 use Psr\Http\Message\ResponseInterface;
 
-class Cache implements CacheInterface
+class CacheClient implements CacheClientInterface
 {
     /** @var string  */
     const CONTENT_TYPE_APPLICATION_JSON = 'application/json';
@@ -108,6 +108,7 @@ class Cache implements CacheInterface
                 break;
             }
         }
+
         return $headers;
     }
 
@@ -184,6 +185,7 @@ class Cache implements CacheInterface
                 $arrayKey => $data
             ]);
         }
+
         return $json;
     }
 }

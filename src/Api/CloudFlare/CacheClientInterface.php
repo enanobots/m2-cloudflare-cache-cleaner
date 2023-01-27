@@ -7,11 +7,10 @@
  * @author      Jakub Winkler <jwinkler@qsolutionsstudio.com
  */
 
-namespace Nanobots\CloudFlareCache\Api;
+namespace Nanobots\CloudFlareCache\Api\CloudFlare;
 
 use Psr\Http\Message\ResponseInterface;
-
-interface CacheInterface
+interface CacheClientInterface
 {
     /** @var string  */
     public const CLOUD_FLARE_API = 'https://api.cloudflare.com/client/v4/zones/%s/purge_cache';

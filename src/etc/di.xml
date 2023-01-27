@@ -11,8 +11,8 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <preference for="Nanobots\CloudFlareCache\Api\Data\ConfigInterface"
                 type="Nanobots\CloudFlareCache\Model\Config"/>
-    <preference for="Nanobots\CloudFlareCache\Api\CacheInterface"
-                type="Nanobots\CloudFlareCache\Model\CloudFlare\Cache"/>
+    <preference for="Nanobots\CloudFlareCache\Api\CloudFlare\CacheClientInterface"
+                type="Nanobots\CloudFlareCache\Model\CloudFlare\CacheClient"/>
     <type name="Magento\Framework\Console\CommandList">
         <arguments>
             <argument name="commands" xsi:type="array">
