@@ -2,6 +2,7 @@
   "name": "enanobots/m2-cloudflare-cache-cleaner",
   "type": "magento2-module",
   "license": "OSL-3.0",
+  "version": "1.0.1",
   "authors": [
     {
       "email": "jwinkler@qsolutionsstudio.com",
@@ -12,6 +13,9 @@
       "name": "eCommerce Nanobots"
     }
   ],
+  "config": {
+    "sort-packages": true
+  },
   "description": "Magento 2 CloudFlare Cache Cleaner",
   "homepage": "https://github.com/enanobots/m2-cloudflare-cache-cleaner",
   "minimum-stability": "dev",
