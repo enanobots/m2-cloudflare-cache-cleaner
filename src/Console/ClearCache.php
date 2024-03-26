@@ -9,7 +9,7 @@
 
 namespace Nanobots\CloudFlareCache\Console;
 
-use Nanobots\CloudFlareCache\Api\CacheInterface;
+use Nanobots\CloudFlareCache\Api\CloudFlare\CacheClientInterface;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
@@ -33,14 +33,14 @@ class ClearCache extends Command
     /** @var string  */
     public const ARGUMENT_DATA = 'data';
 
-    /** @var CacheInterface  */
-    protected CacheInterface $cloudFlare;
+    /** @var CacheClientInterface  */
+    protected CacheClientInterface $cloudFlare;
 
     /**
      * @param string|null $name
      */
     public function __construct(
-        CacheInterface $cloudFlare,
+        CacheClientInterface $cloudFlare,
         string $name = null
     ) {
         $this->cloudFlare = $cloudFlare;
